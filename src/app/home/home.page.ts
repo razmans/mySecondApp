@@ -18,6 +18,7 @@ export class HomePage {
       resultType: CameraResultType.Base64,
     });
 
-    this.image = image.base64String;
+    this.image = 'data:image/png;base64,' + image.base64String;
+    console.log(this.image);
   }
 }

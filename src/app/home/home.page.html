@@ -1,20 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> This is an app </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-list>
+    <ion-item fill="outline">
+      <ion-input placeholder="Email" type="text"> </ion-input>
+    </ion-item>
+    <ion-item fill="outline">
+      <ion-input placeholder="password" type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block">LOGIN</ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <ion-button (click)="takePicture()"> Take a picture </ion-button>
+  <div *ngIf="image">
+    <img [src]="image" />
   </div>
 </ion-content>
